@@ -11,7 +11,7 @@ Please follow the instructions below and fill in the information requested when 
 |               | Name          | Email                |
 |:-------------:|:-------------:|:--------------------:|
 | Team Member 1 | Ida Hui       | ihui@mail.sfsu.edu   |
-| Team Member 2 | German Perez  | Gperez8@mail.sfsu.edu|
+| Team Member 2 | German Perez  | gperez8@mail.sfsu.edu|
 
 ## Changing Repository Name
 
