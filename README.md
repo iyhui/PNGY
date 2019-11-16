@@ -28,4 +28,7 @@ Which ever member created the repository will need to invite the other member to
 
 # Build/Run Instructions
 
-Below please explain how to fully install and run your application.
+* Install Node.js
+* npm install
+* npm start
+* Open localhost:3000
