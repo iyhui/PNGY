@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Post Image</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="text/javascript" href="/js/script.js">
+    <!--<link rel="stylesheet" type="text/css" href="../public/stylesheets/style1.css">-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div id="navbar">
+        <a class="active" href="index.html">Home</a>
+        <div class="topnav-right">
+            <a href="postimage.html">Post</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Register</a>
+        </div>
+    </div>
+
+    <br />
+    <div class="grid-item bg-text center">
+        <h1>Post an Image</h1>
+
+        <form id="form" onsubmit="return validatePost()"">
+            <label>Title</label>
+            <br />
+            <input id=" title" class="form-control" type="text" name="title">
+            <br />
+            <label>Description</label>
+            <br />
+            <input id="desc" class="form-control" type="text" name="description">
+            <br />
+            <label>Upload an Image</label>
+            <br />
+            <input type="file" class="form-control" name="dataFile" id="fileChooser" />
+            <br />
+            
+            By adding an image, I agree to the following:<br>
+            <input type="checkbox" name="confirmAge" value="yes" required> I accept the Acceptable Use Policy<br>
+            <br />
+            <br />
+            <div class="text-right">
+                <input class="btn btn-warning" type="submit" value="Submit" name="Submit" onclick="myFunction()">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
