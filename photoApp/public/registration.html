@@ -35,15 +35,25 @@
     <div class="grid-item bg-text center">
         <h1>Register an Account</h1>
         <!--changed the title in Assignment2 to be cohesive-->
-
         <form id="form" name="RegForm" onsubmit="return validateLength() & validateAlpha()" method="post">
-
-            Username<br /> <input id="user" class="form-control" type="text" name="username"> <br />
-            Password<br /> <input id="pwd" class="form-control" type="password" name="password"> <br />
-            Confirm Password <br /> <input id="cpwd" class="form-control" type="password" name="confirmed">
+            <label>Username</label>
+            <br /> 
+            <input id="user" class="form-control" type="text" name="username"> 
             <br />
-            Email<br /> <input id="email" class="form-control" type="email" name="email"> <br />
-            <input type="checkbox" name="confirmAge" value="yes" required> I am at least 13 years old.<br>
+            <label>Password</label>
+            <br /> 
+            <input id="pwd" class="form-control" type="password" name="password"> 
+            <br />
+            <label>Confirm Password</label>
+            <br /> 
+            <input id="cpwd" class="form-control" type="password" name="confirmed">
+            <br />
+            <label>Email</label>
+            <br /> 
+            <input id="email" class="form-control" type="email" name="email"> 
+            <br />
+            <input type="checkbox" name="confirmAge" value="yes" required> I am at least 13 years old.
+            <br>
             <input type="checkbox" name="agreement" value="yes" required> I accept the Terms of Service and
             Privacy
             Rules.
@@ -55,9 +65,6 @@
             <div class="text-right">
                 <input class="btn btn-warning" type="submit" value="Submit" name="Submit" onclick="myFunction()">
             </div>
-
-
-
 
         </form>
 

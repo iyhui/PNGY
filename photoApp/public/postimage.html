@@ -40,18 +40,20 @@
         <h1>Post an Image</h1>
 
         <form id="form" onsubmit="return validatePost()"">
-            Title:<br />
+            <label>Title</label>
+            <br />
             <input id=" title" class="form-control" type="text" name="title">
             <br />
+            <label>Description</label>
             <br />
-            Description:<br />
             <input id="desc" class="form-control" type="text" name="description">
             <br />
+            <label>Upload an Image</label>
             <br />
-            Upload an Image:<br />
-            <input type="file" class="form-control" name="dataFile" id="fileChooser" />
+            <!--class="form-control"-->
+            <input type="file"   name="dataFile" id="fileChooser" />
             <br />
-            <br />
+            
             By adding an image, I agree to the following:<br>
             <input type="checkbox" name="confirmAge" value="yes" required> I accept the Acceptable Use Policy<br>
             <br />
