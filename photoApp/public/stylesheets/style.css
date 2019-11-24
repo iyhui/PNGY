@@ -1,6 +1,5 @@
 body {
-    background-color: coral;
-    background-image: url('../image/gradient.png');
+    background-image: url('/image/green.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
