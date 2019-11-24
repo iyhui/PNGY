@@ -1,6 +1,6 @@
 # CSC 317 Term Project
 
-## Purose
+## Purpose
 
 The pupose of this repository is to store all the code for your web application. This also includes the history of all commits made and who made them. Only code submitted on the master branch will be graded.
 
@@ -11,7 +11,7 @@ Please follow the instructions below and fill in the information requested when 
 |               | Name          | Email                |
 |:-------------:|:-------------:|:--------------------:|
 | Team Member 1 | Ida Hui       | ihui@mail.sfsu.edu   |
-| Team Member 2 | German Perez  | Gperez8@mail.sfsu.edu|
+| Team Member 2 | German Perez  | gperez8@mail.sfsu.edu|
 
 ## Changing Repository Name
 
@@ -28,4 +28,7 @@ Which ever member created the repository will need to invite the other member to
 
 # Build/Run Instructions
 
-Below please explain how to fully install and run your application.
+* Install Node.js
+* npm install
+* npm start
+* Open localhost:3000
