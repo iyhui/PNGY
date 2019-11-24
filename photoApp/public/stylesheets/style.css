@@ -6,67 +6,34 @@ body {
   background-position: center;
   font-family: "Lucida Sans Unicode", "Lucida Grande";
   font-size: 10px;
-  /*word-spacing: -1.2px;*/
   color: #ffffff;
-  /*font-weight: 400;
-  font-variant: small-caps;
-  text-transform: none;*/  
 }
 
-.bg-text {
-  align-content: center;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.479); /* Black w/opacity/see-through */
-  color: white;
-  border: 1.5px solid #f1f1f1;
-  width: 50%;
-  vertical-align: middle;
-  position: relative;
-  top: 40px;
-}
+  .bg-text {
+    /*align-content: center;*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white; /*font*/
+    border: 1.5px solid #f1f1f1; /*border around gray block*/
+    /*width: 50%;*/
+    /*vertical-align: middle;*/
+  }
   
-pre{
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;
-}
+  /* wrap text for js objects */
 
-  /**.grid-container {
-    transition: .5s ease;
-    align-content: center;
-    display: grid;
-    grid-template-columns: auto;
-    max-width: 50%;
-  }**/
-  
-.grid-item {
-  padding: 20px;
-  text-align: center;
-  /**position: absolute; 
-  bottom: 400px; **/  
-}
-
+  pre{
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+  }
+ 
 .title-item {
   padding: 20px;
   text-align: center;
 }
-  /**h1{
-  text-align: center;
-  margin: auto;
-  padding:2px;
-  border:1px solid #FFFF;
-  opacity: 1;
-  display: block;
-  min-width: 35%;
-  max-width: 50%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  }**/
 
-/* Login */
 h1{
   font-size: 23px;
   color: #ffffff;
@@ -84,23 +51,23 @@ label{
   float: left; 
   width: 10em; 
   padding-left: 12px;
+  font-weight:400;
 }
 
 .center {
-  margin: auto;
-  width: 30%;
-  /**border: 1.5px solid;**/
-  padding: 10px;
-  }
+  margin: auto; 
+  width: 30%; /*Gray Box*/
+  border: 1.5px solid;
+  padding: 50px; /*from text to box spacing*/
+}
 
 /** Nav **/
 #navbar {
   position: absolute;
   top: 0px;
   left: 0px;
-  /*position: sticky;*/
   overflow: hidden;
-  background-color: rgba(0,0,0, 0.85);
+  background-color: rgb(60, 58, 58);
   width: 100%;
 }
   
@@ -126,9 +93,18 @@ label{
   color: black;
 }
 
-#navbar a.active {
-  background-color: #4CAF50;
+.topnav-right {
+  float: right;
+}
+
+/*dropdown*/
+
+a:visited {
   color: white;
+}
+
+a:hover {
+  color: rgb(205, 205, 205);
 }
 
 /**submit button**/
@@ -139,29 +115,10 @@ label{
   font-family: "Lucida Sans Unicode", "Lucida Grande";
   cursor: pointer;
   border-radius: 5px;
-}
-
-.default {
-  border-color: #e7e7e7;
-  color: black;
-}
-
-.default:hover {
-  background: #e7e7e7;
+  margin-left: auto;
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 65%;
-  padding: 13px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-  border-radius: 5px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande";
-}
-
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;

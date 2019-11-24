@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="text/javascript" href="/js/script.js">
+    <!--<link rel="stylesheet" type="text/css" href="../public/stylesheets/style1.css">-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div id="navbar">
+        <a class="active" href="index.html">Home</a>
+        <div class="topnav-right">
+            <a href="postimage.html">Post</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Register</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="grid-item bg-text center">
+        <h1>Register an Account</h1>
+        <!--changed the title in Assignment2 to be cohesive-->
+
+        <form id="form" name="RegForm" onsubmit="return validateLength() & validateAlpha()" method="post">
+
+            Username<br /> <input id="user" class="form-control" type="text" name="username"> <br />
+            Password<br /> <input id="pwd" class="form-control" type="password" name="password"> <br />
+            Confirm Password <br /> <input id="cpwd" class="form-control" type="password" name="confirmed">
+            <br />
+            Email<br /> <input id="email" class="form-control" type="email" name="email"> <br />
+            <input type="checkbox" name="confirmAge" value="yes" required> I am at least 13 years old.<br>
+            <input type="checkbox" name="agreement" value="yes" required> I accept the Terms of Service and
+            Privacy
+            Rules.
+            <br />
+            <br />
+            Already have an account? <a href="login.html">Login</a>
+            <br />
+            <br />
+            <div class="text-right">
+                <input class="btn btn-warning" type="submit" value="Submit" name="Submit" onclick="myFunction()">
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
