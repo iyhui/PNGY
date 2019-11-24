@@ -91,11 +91,25 @@ body {
     background-color: #ddd;
     color: black;
   }
+
+  .topnav-right {
+    float: right;
+  }
+
+  /*dropdown*/
+
   
   /*#navbar a.active {
     color: white;
   }*/
 
+  a:visited {
+    color: white;
+  }
+
+  a:hover {
+    color: rgb(205, 205, 205);
+  }
   /**button**/
   .btn {
     border: 2px solid black;
