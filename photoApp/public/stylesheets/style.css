@@ -1,15 +1,16 @@
 body {
-    background-color: coral;
+    background-color: rgb(142, 238, 182);
     background-image: url('../image/gradient.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    
   }
 
   .bg-text {
     align-content: center;
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgba(0, 0, 0, 0.479); /* Black w/opacity/see-through */
     color: white;
     border: 1.5px solid #f1f1f1;
     width: 50%;
@@ -58,12 +59,20 @@ body {
   backface-visibility: hidden;
   }**/
 
+  h1{
+    font-size: 23px;
+    word-spacing: -1.2px;
+    color: #ffffff;
+    font-weight: 400;
+    font-variant: small-caps;
+    
+  }
+
   .center {
     margin: auto;
     width: 30%;
     /**border: 1.5px solid;**/
     padding: 10px;
-
   }
 
   /** Nav **/
@@ -71,8 +80,10 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    /*position: sticky;*/
     overflow: hidden;
-    background-color: #333;
+    /*background-color: #333;*/
+    background-color: rgba(0,0,0, 0.85);
     width: 100%;
   }
   
@@ -84,6 +95,13 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 14px;
+    word-spacing: -1.2px;
+    color: #ffffff;
+    font-weight: 400;
+    font-variant: small-caps;
+    text-transform: capitalize;
   }
   
   #navbar a:hover {
@@ -96,12 +114,13 @@ body {
     color: white;
   }
 
-  /**button**/
+  /**submit button**/
   .btn {
     border: 2px solid black;
     color: black;
-    font-size: 12px;
+    font-size: 12px; 
     cursor: pointer;
+    border-radius: 5px;
   }
 
   .default {
@@ -121,6 +140,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  border-radius: 5px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
