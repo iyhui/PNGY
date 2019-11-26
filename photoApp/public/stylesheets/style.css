@@ -81,11 +81,10 @@ label{
   top: 0px;
   left: 0px;
   overflow: hidden;
-  background-color: rgb(60, 58, 58);
+  background-color:rgb(113, 113, 113);
   width: 100%;
   /*added from dropdown*/
   overflow: hidden;
-  background-color: #333;
 }
   
 #navbar a {
