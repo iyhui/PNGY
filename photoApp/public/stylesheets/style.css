@@ -90,7 +90,7 @@ label{
 #navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #b1b1b1;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -100,8 +100,7 @@ label{
 }
   
 #navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  color: white;
 }
 
 .topnav-right {

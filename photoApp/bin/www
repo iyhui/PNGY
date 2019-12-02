@@ -10,10 +10,12 @@ var http = require('http');
 
 /**
  * Get port from environment and store in Express.
+ * this is where port is defined
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
+console.log('Server is listening on port 8000');
 
 /**
  * Create HTTP server.
