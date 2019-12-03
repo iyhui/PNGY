@@ -15,13 +15,14 @@
 
 #navbar1 {
     overflow: hidden;
-    background-color: rgb(113, 113, 113);
+    /*bar color*/
+    background-color: rgb(113, 113, 113); 
 }
 
 #navbar1 a {
     float: left;
     display: block;
-    color: #b1b1b1;
+    color: #d8d8d8;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
