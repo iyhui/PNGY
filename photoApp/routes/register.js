@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET login page. */
+/* GET Registration page. */
 router.get('/', function(req, res) {
-  res.render('login.html');
+  res.render('register.html');
 });
 
 module.exports = router;
