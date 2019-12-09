@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET login page. */
+/* GET Post Image page. */
 router.get('/', function(req, res) {
-  res.render('login.html');
+  res.render('post.html');
 });
 
 module.exports = router;

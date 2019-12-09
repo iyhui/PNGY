@@ -7,10 +7,13 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
+var infoRouter = require('./routes/info');
+var postRouter = require('./routes/post');
+var registerRouter = require('./routes/register');
 
 var app = express();
 
-var engines = require('consolidate');//something from stack overflow
+var engines = require('consolidate'); //something from stack overflow
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -26,6 +29,8 @@ app.set('view engine', 'html');
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
-
+app.use('/info', infoRouter);
+app.use('/post', postRouter);
+app.use('/register', registerRouter);
 
 module.exports = app;
