@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mysql = require('mysql'); //connecting to mysql
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
@@ -12,6 +13,33 @@ var postRouter = require('./routes/post');
 var registerRouter = require('./routes/register');
 
 var app = express();
+
+//create connection
+const db = mysql.createConnection({
+    host    :'localhost',
+    user    :'root',
+    password:'password',
+    database:'Eureka'
+});
+
+db.connect((err)=>{
+    if(err){
+        throw err;
+    }
+    console.log('Database is connected!')
+})
+
+
+app.get('/createdb',(req, res) => {
+    let sql = 'CREATE DATABASE nodemysql';
+    db.query(sql, (err, results)=> {
+        if(err){ 
+            throw err;
+        }
+        console.log(result);
+        res.send('Database created...')
+    })
+})
 
 var engines = require('consolidate'); //something from stack overflow
 
