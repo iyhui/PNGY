@@ -23,7 +23,6 @@
     <div id="navbar">
         <a class="active" href="/">PNGY</a>
         <div class="topnav-right">
-            <a href="/post">Post</a>
             <a href="/login">Login</a>
             <a href="/register">Register</a>
         </div>
@@ -37,7 +36,7 @@
     <div class="grid-item bg-text center">
 
         <h1>Login</h1>
-        <form id="form" onsubmit="return validateLength()">
+        <form id="form" action="/login" method="post">
             <label>Username</label>
             <br />
             <input id="user" class="form-control" type="text" placeholder="Username" name="username">
@@ -46,7 +45,7 @@
             <br />
             <input id="pwd" class="form-control" type="password" placeholder="Password" name="pwd">
             <br />
-            Don't have an account? <a href="registration.html">Sign Up</a>
+            Don't have an account? <a href="/register">Sign Up</a>
             <br />
             <div class="text-right">
                     <input class="btn btn-warning" type="submit" value="Submit" name="Submit" onclick="myFunction()">

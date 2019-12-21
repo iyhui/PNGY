@@ -11,12 +11,23 @@ var infoRouter = require('./routes/info');
 var postRouter = require('./routes/post');
 var registerRouter = require('./routes/register');
 var bodyParser = require('body-parser');
+//var bcrypt = require('bcrypt');
 var app = express();
+//const session = require('express-session');
 
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
 }));
+
+//some more stuff
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+//var router = express.Router();
+//router.post('/login',login.login);
 
 //DATABASE CREATE CONNECTION
 const db = mysql.createConnection({
@@ -31,7 +42,7 @@ db.connect(function (err) {
     if (err) {
         return console.error('error: ' + err.message);
     }
-    else{
+    else {
         return console.log('Database is ready!')
     }
     /*var sql = "INSERT INTO account (username, password, email) VALUES ('test', 'test', 'hi german')";
@@ -81,15 +92,79 @@ app.post('/register', function (req, res) {
     var sql = "INSERT INTO account (username, email, password) VALUES (?, ?, ?)";
 
     db.query(sql, [username, email, pass], function (err, data) {
-        if (err){
+        if (err) {
             throw err;
-        } 
-        else{
+        }
+        else {
             console.log("Account has been registered.");
         }
     });
-    res.render('index.html');
+    res.render('post.html');
 });
-//db.end();
+
+// I think I'll create a session here...
+/*app.use(session({
+    cookie: {
+
+    }
+}))*/
+//handler for login
+/*exports.login = function(req,res){
+    var email= req.body.email;
+    var password = req.body.password;
+    connection.query('SELECT * FROM users WHERE email = ?',[email], function (error, results, fields) {
+    if (error) {
+      // console.log("error ocurred",error);
+      res.send({
+        "code":400,
+        "failed":"error ocurred"
+      })
+    }else{
+      // console.log('The solution is: ', results);
+      if(results.length >0){
+        if(results[0].password == password){
+          res.send({
+            "code":200,
+            "success":"login sucessfull"
+              });
+        }
+        else{
+          res.send({
+            "code":204,
+            "success":"Email and password does not match"
+              });
+        }
+      }
+      else{
+        res.send({
+          "code":204,
+          "success":"Email does not exits"
+            });
+      }
+    }
+    });
+  }
+*/
+//var sess = req.session; 
+app.post('/login', function (req, res) {
+    var username = req.body.username;
+    var password = req.body.pwd;
+    console.log(username);
+    console.log(password);
+
+    db.query('SELECT * FROM account WHERE username = ?', [username], function (error, results, fields) {
+        if (results.length > 0) {
+            if (results[0].password == password) {
+                console.log('login successful');
+                res.render('post.html');
+            }
+            else {
+                res.render('login.html');
+            }
+        }
+
+    });
+});
+
 
 module.exports = app;
