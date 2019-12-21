@@ -168,7 +168,7 @@ app.post('/login', function (req, res) {
     });
 });
 
-//post image
+//post image...i tried...
 /*app.post('/post', function (req, res) {
     var post = req.body;
     var title = req.body.title;
