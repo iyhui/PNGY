@@ -36,4 +36,4 @@ Which ever member created the repository will need to invite the other member to
 * Create 2 tables - users_image (colums: id, title, image, desc) and account (columns: id, username, password, email)
 * npm start
 * Open localhost:3000
-*
+
