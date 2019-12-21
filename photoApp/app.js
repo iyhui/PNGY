@@ -146,6 +146,8 @@ app.post('/register', function (req, res) {
   }
 */
 //var sess = req.session; 
+
+//login and redirect
 app.post('/login', function (req, res) {
     var username = req.body.username;
     var password = req.body.pwd;
@@ -165,6 +167,28 @@ app.post('/login', function (req, res) {
 
     });
 });
+
+//post image
+/*app.post('/post', function (req, res) {
+    var post = req.body;
+    var title = req.body.title;
+    var description = req.body.description;
+    var file = req.files.uploaded_image;
+    var img_name = file.name;
+
+    if (file.mimetype == "image/jpeg" || file.mimetype == "image/png" || file.mimetype == "image/gif") {
+        file.mv('public/images/upload_images/' + file.name, function (err) {
+            if (err){
+                return res.status(500).send(err);
+            } 
+                
+            var sql = "INSERT INTO `users_image`(`title`,`image`,`desc`) VALUES ('" + title + "','" + file + "','" + description + "')";
+
+            var query = db.query(sql, function (err, result) {
+                res.redirect('profile/' + result.insertId);
+            });
+
+});*/
 
 
 module.exports = app;
